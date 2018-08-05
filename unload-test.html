@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+// Try using listeners //
+document.addEventListener('visibilitychange', () => {
+  console.log('visibilitychange listener');
+});
+document.addEventListener('pagehide', () => {
+  console.log('pagehide listener');
+});
+document.addEventListener('unload', () => {
+  console.log('unload listener');
+});
+document.addEventListener('beforeunload', () => {
+  console.log('beforeunload listener');
+});
+
+// Try replacing method on window directly //
+window.onpagehide = () => {
+  console.log('window\'s onpagehide');
+}
+window.onunload = () => {
+  console.log('window\'s onunload');
+}
+window.onbeforeunload = () => {
+  console.log('window\'s onbeforeunload');
+}
+</script>
+</body>
+</html>
