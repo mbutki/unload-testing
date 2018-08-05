@@ -17,7 +17,7 @@ Close tab
 // Firefox
 
 Navigate tab to different website
-  1. window.onbeforeunload = ()
+  1. window.onbeforeunload
 
 Close tab
   1. window.onbeforeunload
@@ -25,8 +25,8 @@ Close tab
 // Safari
 
 Navigate tab to different website
-  1. window.onbeforeunload = ()
-  2. window.onpagehide = ()
+  1. window.onbeforeunload
+  2. window.onpagehide
 
 Close tab
   1. window.onbeforeunload
