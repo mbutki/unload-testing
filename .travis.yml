@@ -1,22 +1,15 @@
----
 language: node_js
 node_js:
-  - "6"
-
-sudo: false
-
+  - "7"
+dist: trusty
+sudo: required
+addons:
+  chrome: stable
 cache:
+  yarn: true
   directories:
-    - $HOME/.npm
-
-env:
-
-matrix:
-  fast_finish: true
-
-before_install:
-
+    - node_modules
 install:
-  - yarn install
-
+  - yarn
 script:
+  - yarn test
