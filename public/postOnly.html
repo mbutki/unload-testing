@@ -1,0 +1,12 @@
+<html>
+<body>
+<script>
+function postData() {
+  request = new XMLHttpRequest();
+  request.open('POST', '/post', true);
+  request.setRequestHeader('content-type', 'application/json');
+  request.send('post data');
+}
+</script>
+</body>
+</html>

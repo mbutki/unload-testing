@@ -1,0 +1,22 @@
+---
+language: node_js
+node_js:
+  - "6"
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.npm
+
+env:
+
+matrix:
+  fast_finish: true
+
+before_install:
+
+install:
+  - yarn install
+
+script:
