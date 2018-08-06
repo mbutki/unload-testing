@@ -1,4 +1,7 @@
 # unload-testing
+
+[![Build Status](https://travis-ci.org/mbutki/unload-testing.svg?branch=master)](https://travis-ci.org/devtrace/browsalyzer)
+
 Testing different events for signaling a page unload
 
 - public/index.html: Contains examples of visibilitychange, pagehide, unload, beforeunload, which you can manually play around with.
@@ -8,36 +11,36 @@ Testing different events for signaling a page unload
 
   Closing tab
   
-    ✓ should post on window.onbeforeunload (1134ms)
+    ✓ should post on window.onbeforeunload
     
-    ✓ should post on window.onunload (1037ms)
+    ✓ should post on window.onunload
     
-    ✓ should post on window.onpagehide (1031ms)
+    ✓ should post on window.onpagehide
     
-    ✓ should post on visibilitychange event listener (1030ms)
+    ✓ should post on visibilitychange event listener
     
-    ✓ should NOT post on beforeunload event listener (1039ms)
+    ✓ should NOT post on beforeunload event listener
     
-    ✓ should NOT post on unload event listener (1034ms)
+    ✓ should NOT post on unload event listener
     
-    ✓ should NOT post on pagehide event listener (1039ms)
+    ✓ should NOT post on pagehide event listener
     
 
   Navigating tab
   
-    ✓ should post on window.onbeforeunload (1062ms)
+    ✓ should post on window.onbeforeunload
     
-    ✓ should NOT post on window.onunload (1057ms)
+    ✓ should NOT post on window.onunload (Somestimes works on Travis [Linux]) 
     
-    ✓ should NOT post on window.onpagehide (1066ms)
+    ✓ should NOT post on window.onpagehide (Somestimes works on Travis [Linux]) 
     
-    ✓ should NOT post on visibilitychange event listener (1056ms)
+    ✓ should NOT post on visibilitychange event listener
     
-    ✓ should NOT post on beforeunload event listener (1052ms)
+    ✓ should NOT post on beforeunload event listener
     
-    ✓ should NOT post on unload event listener (1049ms)
+    ✓ should NOT post on unload event listener
     
-    ✓ should NOT post on pagehide event listener (1050ms)
+    ✓ should NOT post on pagehide event listener
     
 
 ## Manual Testing Results
