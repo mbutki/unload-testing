@@ -30,9 +30,9 @@ Testing different events for signaling a page unload
   
     ✓ should post on window.onbeforeunload
     
-    ✓ should NOT post on window.onunload (Somestimes works on Travis [Linux]) 
+    ✓ should NOT post on window.onunload (No POST on local [Mac]; Sometimes POST on Travis [Linux])
     
-    ✓ should NOT post on window.onpagehide (Somestimes works on Travis [Linux]) 
+    ✓ should NOT post on window.onpagehide (No POST on local [Mac]; Sometimes POST on Travis [Linux])
     
     ✓ should NOT post on visibilitychange event listener
     
