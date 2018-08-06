@@ -1,6 +1,6 @@
 # unload-testing
 
-[![Build Status](https://travis-ci.org/mbutki/unload-testing.svg?branch=master)](https://travis-ci.org/devtrace/browsalyzer)
+[![Build Status](https://travis-ci.org/mbutki/unload-testing.svg?branch=master)](https://travis-ci.org/mbutki/unload-testing)
 
 Testing different events for signaling a page unload
 
