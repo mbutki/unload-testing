@@ -25,19 +25,19 @@ export function visibilitychange() {
 }
 
 export function beforeunload() {
-  document.addEventListener('beforeunload', () => {
+  window.addEventListener('beforeunload', () => {
     postData();
   });
 }
 
 export function unload() {
-  document.addEventListener('unload', () => {
+  window.addEventListener('unload', () => {
     postData();
   });
 }
 
 export function pagehide() {
-  document.addEventListener('pagehide', () => {
+  window.addEventListener('pagehide', () => {
     postData();
   });
 }

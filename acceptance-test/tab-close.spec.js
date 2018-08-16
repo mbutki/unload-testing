@@ -64,6 +64,7 @@ describe('Closing tab', () => {
     });
   });
 
+  // Incorrect ways to listen for tab navigate //
   it('should post on window.onunload', async () => {
     return loadThenClose({
       eventListener: windowOnunload,
@@ -78,32 +79,31 @@ describe('Closing tab', () => {
     });
   });
 
-  it('should post on visibilitychange event listener', async () => {
+  it('should post on window.addEventListener(\'beforeunload\'', async () => {
+    return loadThenClose({
+      eventListener: beforeunload,
+      expectPost: true
+    });
+  });
+
+  it('should post on window.addEventListener(\'unload\'', async () => {
+    return loadThenClose({
+      eventListener: unload,
+      expectPost: true
+    });
+  });
+
+  it('should post on document.addEventListener(\'visibilitychange\'', async () => {
     return loadThenClose({
       eventListener: visibilitychange,
       expectPost: true
     });
   });
 
-  // Incorrect ways to listen for tab close //
-  it('should NOT post on beforeunload event listener', async () => {
-    return loadThenClose({
-      eventListener: beforeunload,
-      expectPost: false
-    });
-  });
-
-  it('should NOT post on unload event listener', async () => {
-    return loadThenClose({
-      eventListener: unload,
-      expectPost: false
-    });
-  });
-
-  it('should NOT post on pagehide event listener', async () => {
+  it('should post on window.addEventListener(\'pagehide\'', async () => {
     return loadThenClose({
       eventListener: pagehide,
-      expectPost: false
+      expectPost: true
     });
   });
 });

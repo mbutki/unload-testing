@@ -73,35 +73,35 @@ describe('Navigating tab', () => {
     });
   });
 
-  xit('should NOT post on window.onpagehide (currently flaky)', async () => {
+  it('should NOT post on window.onpagehide', async () => {
     return loadThenNavigate({
       eventListener: windowOnpagehide,
       expectPost: false
     });
   });
 
-  xit('should NOT post on visibilitychange event listener (currently flaky)', async () => {
-    return loadThenNavigate({
-      eventListener: visibilitychange,
-      expectPost: false
-    });
-  });
-
-  it('should NOT post on beforeunload event listener', async () => {
+  it('should post on window.addEventListener(\'beforeunload\'', async () => {
     return loadThenNavigate({
       eventListener: beforeunload,
-      expectPost: false
+      expectPost: true
     });
   });
 
-  it('should NOT post on unload event listener', async () => {
+  it('should NOT post on window.addEventListener(\'unload\'', async () => {
     return loadThenNavigate({
       eventListener: unload,
       expectPost: false
     });
   });
 
-  it('should NOT post on pagehide event listener', async () => {
+  it('should NOT post on document.addEventListener(\'visibilitychange\'', async () => {
+    return loadThenNavigate({
+      eventListener: visibilitychange,
+      expectPost: false
+    });
+  });
+
+  it('should NOT post on window.addEventListener(\'pagehide\'', async () => {
     return loadThenNavigate({
       eventListener: pagehide,
       expectPost: false
