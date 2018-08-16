@@ -30,7 +30,7 @@ async function loadThenClose({ eventListener, expectPost }) {
   await page.evaluate(eventListener);
   
   await page.close({runBeforeUnload: true});
-  await wait(1000);
+  await wait(5000);
 
   const count = getCount();
   const sawPost = count === 1 ? true : false;
