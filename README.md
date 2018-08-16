@@ -10,37 +10,22 @@ Testing different events for signaling a page unload
 ## Chrome-Headless Automated Testing Results
 
   Closing tab
-  
-    ✓ should post on window.onbeforeunload
-    
-    ✓ should post on window.onunload
-    
-    ✓ should post on window.onpagehide
-    
-    ✓ should post on visibilitychange event listener
-    
-    ✓ should NOT post on beforeunload event listener
-    
-    ✓ should NOT post on unload event listener
-    
-    ✓ should NOT post on pagehide event listener
-    
+    ✓ should post on window.onbeforeunload (1086ms)
+    ✓ should post on window.onunload (1039ms)
+    ✓ should post on window.onpagehide (1038ms)
+    ✓ should post on window.addEventListener('beforeunload' (1036ms)
+    ✓ should post on window.addEventListener('unload' (1039ms)
+    ✓ should post on document.addEventListener('visibilitychange' (1036ms)
+    ✓ should post on window.addEventListener('pagehide' (1038ms)
 
   Navigating tab
-  
-    ✓ should post on window.onbeforeunload
-    
-    - should NOT post on window.onunload (Stable local [Mac]; Flaky on Travis [Linux])
-    
-    - should NOT post on window.onpagehide (Stable local [Mac]; Flaky on Travis [Linux])
-    
-    ✓ should NOT post on visibilitychange event listener
-    
-    ✓ should NOT post on beforeunload event listener
-    
-    ✓ should NOT post on unload event listener
-    
-    ✓ should NOT post on pagehide event listener
+    ✓ should post on window.onbeforeunload (1048ms)
+    ✓ should NOT post on window.onunload (1058ms)
+    ✓ should NOT post on window.onpagehide (1051ms)
+    ✓ should post on window.addEventListener('beforeunload' (1052ms)
+    ✓ should NOT post on window.addEventListener('unload' (1050ms)
+    ✓ should NOT post on document.addEventListener('visibilitychange' (1058ms)
+    ✓ should NOT post on window.addEventListener('pagehide' (1067ms)
     
 
 ## Manual Testing Results
