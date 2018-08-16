@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "test": "npm run build && mocha --recursive dist/acceptance-test --timeout 5000",
+    "test": "npm run build && mocha --recursive dist/acceptance-test --timeout 10000",
     "build": "rimraf dist/ && babel acceptance-test --out-dir dist/acceptance-test --copy-files && babel test-server --out-dir dist/test-server --copy-files"
   },
   "dependencies": {
